@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>return-book</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link rel="icon" href="{% static 'icons/book.svg' %}?{% now 'U' %}" />
+  <link rel="stylesheet" href="{% static 'return-book/style.css' %}?{% now 'U' %}" />
+  <link rel="stylesheet" href="{% static 'default-styles/universal-style.css' %}?{% now 'U' %}" />
+  <link rel="stylesheet" href="{% static 'default-styles/root-variables.css' %}?{% now 'U' %}" />
+  <link rel="stylesheet" href="{% static 'default-styles/fields-style.css' %}?{% now 'U' %}" />
+  <script src="{% static 'default-script/consts.js' %}?{% now 'U' %}" ></script>
+  <script src="{% static 'return-book/script.js' %}?{% now 'U' %}" defer></script>
+</head>
+
+<body>
+  <div id="root">
+    <header>
+      <button style="background-image: url('./static/icons/home.svg');" onclick="GOTO_HOME()" ></button>
+      <h1>return-book</h1>
+      <button toggle_theme style=" background-image: url('./static/icons/sun.svg'); "></button>
+    </header>
+    <main>
+      <form method="post" name="return-book"/>
+        {% csrf_token %}
+        <input required type="number" name="book_id" placeholder="book_id"/>
+        <input required type="number" name="client_id" placeholder="client_id"/>
+        <input required type="number" name="password" placeholder="password"/>
+        <input required type="date" name="borrow_date" placeholder="borrow_date"/>
+        <input required type="date" name="return_date" placeholder="return_date" readonly />
+        <input required type="number" name="id" placeholder="borrow_id"/>
+        <input readonly type="text" name="fine" placeholder="fine-due"/>
+        <input type="submit">
+      </form>
+    </main>
+    <footer>
+      <h1>dev:Soumabha Saha</h1>
+    </footer>
+  </div>
+</body>
+
+</html>

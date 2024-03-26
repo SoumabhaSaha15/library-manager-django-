@@ -1,0 +1,55 @@
+*{
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: all 0.75s cubic-bezier(0.23, 1, 0.320, 1);
+  box-sizing: border-box;
+  border: 0 solid transparent;
+  border-radius: 10px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat no-repeat;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+button[toggle_theme]{
+  background-size: 100%;
+}
+button[toggle_theme]:hover{
+  background-size: 110%;
+}
+body{
+  & div#root{
+    background-image: url('../icons/library.svg');
+    background-size: cover;
+    background-position: center center; 
+    background-repeat: no-repeat no-repeat; 
+    background-attachment: fixed; 
+    background-blend-mode: hard-light;
+    & main{
+      color: red;
+      font-weight: 900;
+      /* font-size: 3vmax; */
+      background-image: url('../icons/library.svg');
+      background-size: cover; 
+      background-position: center center; 
+      background-repeat: no-repeat no-repeat; 
+      background-attachment: fixed; 
+      background-blend-mode: hard-light;
+    }
+  }
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 2px;
+  background-color: var(--background_color);
+}

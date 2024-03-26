@@ -1,0 +1,12 @@
+
+input,button,select,textarea:focus{
+  outline: 0 solid transparent;
+}
+input::placeholder,button::placeholder,textarea::placeholder,select::placeholder{
+  color: var(--accent) !important;
+  font-weight: 600 !important;
+}
+input,button,textarea,select{
+  font-weight: 500 !important;
+}
+

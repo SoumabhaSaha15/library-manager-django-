@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>borrow-book</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link rel="icon" href="{% static 'icons/book.svg' %}?{% now 'U' %}" />
+  <link rel="stylesheet" href="{% static 'borrow-book/style.css' %}?{% now 'U' %}" />
+  <link rel="stylesheet" href="{% static 'default-styles/universal-style.css' %}?{% now 'U' %}" />
+  <link rel="stylesheet" href="{% static 'default-styles/root-variables.css' %}?{% now 'U' %}" />
+  <link rel="stylesheet" href="{% static 'default-styles/fields-style.css' %}?{% now 'U' %}" />
+  <script src="{% static 'default-script/consts.js' %}?{% now 'U' %}" ></script>
+  <script src="{% static 'borrow-book/script.js' %}?{% now 'U' %}" defer></script>
+</head>
+
+<body>
+  <div id="root" >
+    <header>
+      <button style="background-image: url('./static/icons/home.svg');background-size: 80%;" onclick="GOTO_HOME()" ></button>
+      <h1>borrow-book</h1>
+      <button toggle_theme style=" background-image: url('./static/icons/sun.svg'); "></button>
+    </header>
+    <main>
+      <form name="borrow-book">
+        {% csrf_token %}
+        <input type="number" name="client_id" placeholder="client_id" required/>
+        <input type="number" name="book_id" placeholder="book_id" required readonly/>
+        <select type="text" name="book_name" placeholder="book_name" required>
+          <option value="" selected disabled hidden>Choose book here</option>
+        </select>
+        <input type="text" name="name" placeholder="client_name" required/>
+        <input type="date" name="borrow_date" placeholder="borrow_date" readonly required/>
+        <input type="date" name="return_date" placeholder="return_date" required/>
+        <input type="text" name="id" readonly placeholder="submition status" />
+        <input type="submit" />
+      </form>
+    </main>
+    <footer>
+      <h1>dev:Soumabha Saha</h1>
+    </footer>
+  </div>
+</body>
+
+</html>

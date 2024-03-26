@@ -1,0 +1,167 @@
+body{
+  border-radius: 0;
+  & div#root{
+    min-height: 100vh;
+    min-width: 100%;
+    max-height: 100vh;
+    max-width: 100%;
+    padding: 5px;
+    display: grid;
+    grid-template-rows: calc(8% - 2px) calc(84% - 2px) calc( 8% - 2px);
+    place-items: center;
+    border-radius: 0;
+    gap: 3px;
+    background-color: var(--background_color);
+    & header,footer{
+      height: 100%;
+      width: 100%;
+      color: var(--text_color);
+      background-color: var(--accent);
+      & h1{
+        color: var(--text_color);
+        line-height: 8vh;
+        font-weight: 300;
+      }
+    }
+    & header{
+      display: grid;
+      grid-template-columns: 8vh calc(100% - 16vh) 8vh;
+      grid-auto-rows: 100%;
+      place-items: center;
+      
+      & button{
+        height: 100%;
+        width: 100%;
+        background-color: var(--accent);
+      }
+    }
+    & main{
+      background-color: var(--background_color);
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-auto-rows: 100%;
+      place-items: center;
+      overflow: auto;
+      & form{
+        background-color: var(--foreground_color);
+        width: 60%;
+        display: grid;
+        gap: 6px;
+        padding: 4px;
+        place-items: center;
+        height: 90%;
+        overflow: auto;
+        & input{
+          height: 6vh;
+          max-width: 80%;
+          min-width: 60%;
+          font-size: 3vh;
+          background-color: var(--background_color);
+          color: var(--text_color);
+          text-align: center;
+        }
+        & input[type="submit"]{
+          line-height: 6vh;
+          font-weight: 900;
+          font-size: 3vh;
+        }
+        & input[type="submit"]:hover{
+          background-color: var(--text_color);
+          color: var(--foreground_color);
+        }
+      }
+      & section[id]{
+        display: none;
+        min-height: 100%;
+        min-width: 100%;
+        place-items: center;
+        overflow: auto;
+        & table{
+          all:unset;
+          transition: all 0.75s cubic-bezier(0.23, 1, 0.320, 1);
+          margin: 10px 0 10px 0;
+          max-width: 80%;
+          width: 80%;
+          border-radius: 10px;
+          color: var(--accent);
+          border-collapse: collapse;
+          display: table;
+          & thead{
+            border-radius: 10px 10px 0 0;
+            & tr{
+              border-radius: 10px 10px 0 0;
+              display: grid;
+              place-items: center;
+              grid-template-columns: repeat(auto-fill,50%);
+              & th{
+                text-align: center;
+                word-break: break-all;
+                border-radius: 0;
+                color: var(--text_color);
+                background-color: var(--accent);
+                border: 1px solid var(--accent);
+              }
+              & th:first-of-type{
+                border-radius: 10px 0 0 0;
+                text-align: center;
+                word-break: break-all;
+                border: 1px solid var(--accent);
+              }
+              & th:last-of-type{
+                border-radius: 0 10px 0 0;
+                text-align: center;
+                word-break: break-all;
+                border: 1px solid var(--accent);
+              }
+            }
+            
+          }
+          & tbody{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0 0 10px 10px;
+            & tr{
+              border-radius: 0;
+              display: grid;
+              place-items: center;
+              grid-template-columns: repeat(auto-fill,50%);
+              & td{
+                border-radius: 0;
+                background-color: var(--foreground_color);
+                color: var(--text_color);
+                border: 1px solid var(--accent);
+                text-align: center;
+                word-break: break-all;
+              }
+            }
+            & tr:last-of-type{
+              border-radius: 0 0 10px 10px;
+              display: grid;
+              place-items: center;
+              grid-template-columns: repeat(auto-fill,50%);
+              & td{
+                border-radius: 0 0 10px 10px;
+                border: 1px solid var(--accent);
+                text-align: center;
+                word-break: break-all;
+              }
+              & td:first-of-type{
+                border-radius: 0 0 0 10px;
+              }
+              & td:last-of-type{
+                border-radius: 0 0 10px ;
+              }
+            }
+          }
+        }
+        & table:hover{
+          transform: scale(1.05);
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}

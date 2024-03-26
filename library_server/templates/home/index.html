@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link rel="icon" href="{% static 'icons/book.svg' %}?{% now 'U' %}" />
+  <link rel="stylesheet" href="{% static 'home/style.css' %}?{% now 'U' %}" />
+  <link rel="stylesheet" href="{% static 'default-styles/universal-style.css' %}?{% now 'U' %}" />
+  <link rel="stylesheet" href="{% static 'default-styles/root-variables.css' %}?{% now 'U' %}" />
+  <link rel="stylesheet" href="{% static 'default-styles/fields-style.css' %}?{% now 'U' %}" />
+  <script src="{% static 'default-script/consts.js' %}?{% now 'U' %}" ></script>
+  <script src="{% static 'home/script.js' %}?{% now 'U' %}" defer></script>
+</head>
+
+<body>
+  <div id="root">
+    <header>
+      <button style="background-image: url('./static/icons/book.svg');background-size: 80%;" onclick="" ></button>
+      <h1>home</h1>
+      <button toggle_theme style=" background-image: url('./static/icons/sun.svg'); "></button>
+    </header>
+    <main>
+      <ul>
+        <li> <a href="./add-book">add-book</a> </li>
+        <li> <a href="./add-client">add-client</a> </li>
+        <li> <a href="./add-admin">add-admin</a> </li>
+        <li> <a href="./search-book">search-book</a> </li>
+        <li> <a href="./borrow-book">borrow-book</a> </li>
+        <li> <a href="./client-page">client-page</a> </li>
+        <li> <a href="./return-book">return-book</a> </li>
+        <li> <a href="./admin-page">admin-page</a> </li>
+      </ul>
+    </main>
+    <footer>
+      <h1>dev:Soumabha Saha</h1>
+    </footer>
+  </div>
+</body>
+
+</html>
