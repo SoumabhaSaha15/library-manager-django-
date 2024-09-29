@@ -1,1 +1,1 @@
-<img src="https://previews.dropbox.com/p/pdf_img/ACbstoM4CoAGCo2wL0NVCn8_WSzrbzh491k_L01P0VCcMhpNjujvo5mon4HrVswkjVcPOCxFqYQ9IeyLFPpQvasJKiCnECVuBohvXNw5I--ecGtn1QxCyf0TFgRGGn-HhSRkmd9-RZSE-AKtdiCiKDaush_JIWM-jZib9MWeG0vmfSYyKPhoyPD_DqQ8AuH3OvFZYwDBlLYnZivMPIX_OVRcwL3LzDgtHtHBGMG8sZAHpjz8dSaOvz-i4fGrz9o2mKPHWSpbmTCeQXCtAqTfmmVuXXglQzIoVly0EZbsV2RfoayqmNcUnQBuq6WC16kapVg/p.png?is_prewarmed=true&page=0" alt="course certificate"/>
+<img src="./certificate.png" alt="course certificate"/>
