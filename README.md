@@ -2,7 +2,7 @@
   <figure>
     <img src="./certificate.png" alt="course certificate"/>
     <figcaption>
-      certificate.png
+      certificate
     </figcaption>
   </figure>
   <figure>
